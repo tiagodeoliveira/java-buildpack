@@ -10,15 +10,6 @@ OPT_DIR=$BP_DIR/../opt/
 
 cd $BUILD_DIR
 
-if [ -d .jdk ]; then
-  echo -n "       Extracting OpenJFX ... "
-  unzip javafx.zip -d .jdk > /dev/null 2>&1
-else
-  echo -n "       Extracting OpenJFX to .jdk-overlay/ ... "
-  unzip javafx.zip -d .jdk-overlay > /dev/null 2>&1
-fi
-echo "done"
-
-rm javafx.zip
+uname -a
 
 ruby compile-ruby
